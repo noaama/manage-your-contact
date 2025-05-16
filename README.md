@@ -14,7 +14,9 @@ Dans le formulaire d’ajout de contact, séparer le champ "Name" en deux champs
 Dans le header, remplacer le bouton "New Contact" par "Purchase Credits".
 <img src="img/changethename.png" alt="'New Contact' par 'Purchase Credits'"/>
 Lorsqu’un achat de crédits est effectué, enregistrer cette information dans la base de données.
-<img src="img/master.png" alt="enregistrer cette information dans la base de données.">
+<p style ="align=center">
+  <img src="img/master.png" alt="enregistrer cette information dans la base de données.">
+</p>
 
 <div style="background-color:#f8d7da; color:#721c24; padding:12px; border-radius:6px; border:1px solid #f5c6cb; margin-bottom:16px;">
 <strong>Troisième mission : Ajout de fonctionnalités</strong>
