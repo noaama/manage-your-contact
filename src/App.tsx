@@ -1,20 +1,26 @@
 // App.tsx
-import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 
 // 1. Import de Stripe Elements
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
-import AppLayout from './components/layout/AppLayout';
-import AuthLayout from './components/layout/AuthLayout';
+import AppLayout from "./components/layout/AppLayout";
+import AuthLayout from "./components/layout/AuthLayout";
 
-import SignInPage from './pages/SignInPage';
-import SignUpPage from './pages/SignUpPage';
-import ContactsListPage from './pages/ContactsListPage';
-import NewContactPage from './pages/NewContactPage';
-import EditContactPage from './pages/EditContactPage';
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
+import ContactsListPage from "./pages/ContactsListPage";
+import NewContactPage from "./pages/NewContactPage";
+import EditContactPage from "./pages/EditContactPage";
+import { LoadScript } from "@react-google-maps/api";
+
+// Liste des librairies Google Maps à charger
+const GOOGLE_LIBS: ("drawing" | "geometry" | "places" | "visualization")[] = [
+  "places",
+];
 
 // 2. Initialisation de Stripe.js avec ta clé publique
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);

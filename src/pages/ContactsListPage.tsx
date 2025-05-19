@@ -24,7 +24,7 @@ const ContactsListPage: React.FC = () => {
         .from('contacts')
         .select('*')
         .eq('created_by', user!.id)
-        .order('name', { ascending: true });
+        .order('first_name', { ascending: true });
 
       if (error) {
         throw error;
